@@ -24,6 +24,28 @@ public class BookSecurity {
         return http.build();
     }
 
+
+    @Bean
+    UserDetailsService testOnlyUsers(PasswordEncoder passwordEncoder){
+        User.UserBuilder users = User.builder();
+        UserDetails qodiriy = users
+                .username("Qodiriy")
+                .password(passwordEncoder.encode("q1234"))
+                .build();
+
+        UserDetails oybek = users
+                .username("Oybek")
+                .password(passwordEncoder.encode("o1234"))
+                .build();
+
+        UserDetails hank = users
+                .username("hank-owns-no-book")
+                .password(passwordEncoder.encode("h1234"))
+                .build();
+
+        return new InMemoryUserDetailsManager(qodiriy, oybek, hank);
+    }
+
     @Bean
     PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
