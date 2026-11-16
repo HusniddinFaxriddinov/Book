@@ -1,4 +1,6 @@
 package com.example.book;
-
-public record Book(Long id, double price, String author) {
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
+@Table("BOOK_TABLE")
+public record Book(@Id Long id, double price, String author) {
 }

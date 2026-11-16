@@ -13,8 +13,8 @@ class BookApplicationTests {
     @Autowired
     TestRestTemplate restTemplate;
 
-	@Test
-	void shouldReturnBookWithId() {
-	}
+//	@Test
+//	void shouldReturnBookWithId() {
+//	}
 
 }
