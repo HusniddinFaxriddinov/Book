@@ -1,5 +1,5 @@
 [
-  {"id": 99, "price": 123.00, "owner": "sarah1"},
-  {"id": 102, "price": 1.00, "owner": "sarah1"},
-  {"id": 100, "price": 100.00, "owner": "sarah1"},
+  {"id": 99,"price": 123.00, "author": "Qodiriy"},
+  {"id": 100,"price": 1.00, "author": "Qodiriy"},
+  {"id": 101, "price": 150.00, "author": "Qodiriy"}
 ]
